@@ -1,0 +1,117 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    background: #111;
+    overflow: hidden;
+  }
+  
+  
+  .team-container {
+    padding: 20px;
+  }
+  
+  .team-heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .universities {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  
+  .university-card {
+    background-color: floralwhite;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+    flex: 0 0 calc(25% - 20px); 
+  }
+  
+  .mentors {
+    text-align: center;
+  }
+  
+  .mentor-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .mentor-profile {
+    flex: 0 0 calc(25% - 40px); 
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .mentor-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #ccc; 
+    margin: 0 auto 10px;
+  }
+  
+  
+  .circle {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    aspect-ratio: 1/1;
+    background: #0f0;
+    box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0, 0 0 50px #0f0;
+    border-radius: 50%;
+    animation: animate linear 5s forwards;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh);
+      opacity: 0;
+    }
+  }
+  
+  .circle::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 25%;
+    width: 50%;
+    height: 100vh;
+    opacity: 0.5;
+    background: linear-gradient(#0f0, transparent);
+  }
+  
+
+  
+  .mentor-box {
+    width: 25%;
+    max-height: 800px; /* Set a maximum height */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mentor-box p {
+    text-align: center;
+    margin: 0;
+  }
+  
